@@ -8,5 +8,7 @@ terraform {
 }
 
 provider "fortios" {
-  # Configuration options
+  hostname     = var.fortigate_host
+  token        = var.fortigate_token
+  insecure     = false
 }
