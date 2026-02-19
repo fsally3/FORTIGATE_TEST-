@@ -12,3 +12,10 @@ provider "fortios" {
   token        = var.fortigate_token
   insecure     = false
 }
+
+resource "fortios_firewall_address" "Corp-Lan" {
+  name    = var.address_name
+  type    = var.address_type
+  subnet  = var.address_subnet
+  comment = var.address_comment
+}
